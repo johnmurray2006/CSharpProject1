@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarInsurance22Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarInfo22">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dateOfBirth" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="carMake" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carModel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="carYear" Type="int" Nullable="false" />
+    <Property Name="tickets" Type="int" Nullable="false" />
+    <Property Name="dui" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="coverage" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="removed" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="carTotal" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CarInsurance22ModelStoreContainer">
+    <EntitySet Name="CarInfo22" EntityType="Self.CarInfo22" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
